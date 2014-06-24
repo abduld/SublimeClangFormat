@@ -233,7 +233,7 @@ class clangFormatEventListener(sublime_plugin.EventListener):
         # Only do this for C or C++. TODO: we should consider adding support
         # For Objective-C at some point.
         syntax = view.settings().get('syntax')
-        if syntax.endswith('C.tmLanguage') or syntax.endswith('C++.tmLanguage'):            
+        if syntax.endswith('C.tmLanguage') or syntax.endswith('C++.tmLanguage') or syntax.endswith('C++11.tmLanguage'):            
             # Ensure that settings are up to date.
             load_settings()
             if format_on_save:
